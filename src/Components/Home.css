@@ -1,14 +1,23 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
 
     height: 100vh;
-    background-color: rgb(242, 253, 253);
+    background: url('../assets/bg-2.avif') center no-repeat;
+
     text-align: center;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: scroll;
+    overflow-y: scroll;
+    background-size: 100% 100%;
+    overflow-x: hidden;
 }
+
 
 .img {
     width: 50px;
@@ -30,7 +39,7 @@
 }
 
 .MuiInputBase-root {
-    color: #333;
+    color: #424242;
 }
 
 
@@ -42,6 +51,7 @@
     z-index: 0;
     margin-top: 10px;
 }
+
 
 .data {
 
@@ -66,10 +76,7 @@
 }
 
 .chip-div {
-
-    /* overflow-x: scroll; */
     display: flex;
-    /* width: 500px; */
     gap: 5px,
 }
 
