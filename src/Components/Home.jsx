@@ -84,10 +84,16 @@ const Home = () => {
   const handleInputChange = (event) => {
     const value = event.target.value;
     setInputValue(value);
-    const filtered = items.filter((item) =>
-      item.name.toLowerCase().includes(value.toLowerCase())
-    );
-    setFilteredItems(filtered);
+
+    if (value === "") {
+      setFilteredItems([]);
+      setSelectedItems([]);
+    } else {
+      const filtered = items.filter((item) =>
+        item.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setFilteredItems(filtered);
+    }
   };
 
   const handleItemClick = (item) => {
