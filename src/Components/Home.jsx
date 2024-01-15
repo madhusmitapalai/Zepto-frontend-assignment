@@ -144,16 +144,24 @@ const Home = () => {
         onChange={handleInputChange}
       />
       <div className="list-container">
-        {filteredItems.map((item) => (
-          <div
-            key={item.id}
-            onClick={() => handleItemClick(item)}
-            className="data"
-          >
-            <img src={item.image} alt="images" className="img" />
-            {item.name}
+        {filteredItems.length == 0 ? (
+          <>
+            <h1 className="no-data">No Data Found</h1>
+          </>
+        ) : (
+          <div>
+            {filteredItems.map((item) => (
+              <div
+                key={item.id}
+                onClick={() => handleItemClick(item)}
+                className="data"
+              >
+                <img src={item.image} alt="images" className="img" />
+                {item.name}
+              </div>
+            ))}
           </div>
-        ))}
+        )}
       </div>
     </div>
   );

@@ -69,10 +69,22 @@
     width: 300px;
 }
 
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(20%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 .no-data {
     color: red;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 700;
+    animation: slideAnimation 5s linear infinite;
+    margin-top: 50px;
 }
 
 .chip-div {
